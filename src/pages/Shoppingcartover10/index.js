@@ -29,8 +29,12 @@ export default function Shoppingcartover10() {
                   <img src={item.imageUrl} alt={item.name} />
                     <div className='description'>
                       <h1>{item.name}</h1>
-                      <h2>R$ {item.listPrice/100}</h2>
-                      <h1>R$ {item.sellingPrice/100}</h1>
+                      <h2>
+                        {(item.listPrice/100).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}).replace(".", ",")}
+                      </h2>
+                      <h1>
+                        {(item.sellingPrice/100).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}).replace(".", ",")}
+                      </h1>
                     </div>
                 </div>
               </li>
@@ -39,7 +43,9 @@ export default function Shoppingcartover10() {
           <hr size="2" width="100%" color='#c4c4c4'></hr>          
             <div className='totalcart'>
               <p className='total'>Total</p>
-              <p className='value'>R$ {apiData.value/100}</p>           
+              <p className='value'>
+                {(apiData.value/100).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}).replace(".", ",")}
+              </p>           
             </div> 
             <div className='checklabel'>
               {checkShipping()}
