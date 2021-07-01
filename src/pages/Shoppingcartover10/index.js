@@ -2,12 +2,9 @@ import React from 'react';
 import './styles.css';
 import apiDataOver10 from '../../api/acima-10-reais.json';
 
-
-export default function Shoppingcartover10() {
-      
+export default function Shoppingcartover10() {      
     let apiData = apiDataOver10;
-    console.log(apiData)  
-
+    
     function checkShipping() {
       if((apiData.value/100) > 10) {
         return (
