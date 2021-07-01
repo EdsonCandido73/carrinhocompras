@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Shoppingcart from './pages/Shoppingcart';
+import Shoppingcartover10 from './pages/Shoppingcartover10';
+import Shoppingcartunder10 from './pages/Shoppingcartunder10';
 
 
 export default function Routes() {
@@ -10,7 +11,8 @@ export default function Routes() {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Home}/>
-                <Route path="/shoppingcart" component={Shoppingcart}/>
+                <Route path="/shoppingcartover10" component={Shoppingcartover10}/>
+                <Route path="/shoppingcartunder10" component={Shoppingcartunder10}/>
             </Switch>
         </BrowserRouter>
     );    

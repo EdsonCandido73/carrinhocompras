@@ -10,10 +10,10 @@ function Home() {
         <p>
           Escolha uma das situações do carrinho de compras
         </p>
-        <Link to="/shoppingcart/?cartTotal=under10">
+        <Link to="/shoppingcartunder10">
           <button className='btn' >Abaixo de R$ 10,00</button>
         </Link>
-        <Link to="/shoppingcart/?cartTotal=over10">
+        <Link to="/shoppingcartover10">
           <button className='btn' >Acima de R$ 10,00</button>
         </Link>        
       </div>
